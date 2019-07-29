@@ -1,0 +1,58 @@
+<p>sign works!</p>
+<!-- <div ng-app="demoApp" ng-controller="demoController">
+    <form name="form" class="md-signup-rules" mobiscroll-form="settings">
+        <div class="mbsc-form-group-inset">
+            <div class="mbsc-form-group-title">Sign Up</div>
+
+            <label ng-class="{ 'mbsc-err': form.username.$invalid && (form.$submitted || form.username.$touched) }">
+                <input name="username" type="text" placeholder="Username" minlength="2" ng-model="user.username" required data-icon="user4">
+                <span class="mbsc-err-msg" ng-show="form.username.$error.required && (form.$submitted || form.username.$touched)">Choose a username.</span> 
+        
+            </label>
+
+            <label ng-class="{ 'mbsc-err': form.email.$invalid && (form.$submitted || form.email.$touched) }">
+                <input name="email" type="email" placeholder="Email" ng-model="user.email" required data-icon="ion-ios7-email">
+                <span class="mbsc-err-msg" ng-show="form.email.$error.required && (form.$submitted || form.email.$touched)">Tell us your email.</span>
+                <span class="mbsc-err-msg" ng-show="form.email.$error.email && (form.$submitted || form.email.$touched)">This is not a valid email.</span>
+        
+            </label>
+
+            <label ng-class="{ 'mbsc-err': form.password.$invalid && (form.$submitted || form.password.$touched) }">
+                <input name="password" type="password" placeholder="Password" minlength="6" ng-pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}" ng-model="user.password" required data-icon="lock2" data-password-toggle="true">
+                <span class="mbsc-err-msg" ng-show="form.password.$error.required && (form.$submitted || form.password.$touched)">Choose a password.</span>
+        
+            </label>
+        </div>
+        <div class="mbsc-form-group-inset">
+            <div class="mbsc-padding">
+                <h6>Use lowercase and uppercase characters </h6>
+                <h6>Length of password should be at least 6 characters</h6>
+            </div>
+
+            <div class="mbsc-padding">
+                <button class="mbsc-btn-block" type="submit">Sign Up</button>
+            </div>
+        </div>
+    </form>
+</div> -->
+
+
+<mbsc-form [options]="formSettings" class="md-signup-rules">
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <mbsc-form-group inset>
+            <mbsc-form-group-title>Sign Up</mbsc-form-group-title>
+            <mbsc-input name="username" formControlName="username" [error]="form.controls['username'].invalid && form.controls['username'].dirty && form.controls['username'].touched" [errorMessage]="errorFor('username')" placeholder="Name">Name</mbsc-input>
+            <mbsc-input name="email" formControlName="email" [error]="form.controls['email'].invalid && form.controls['email'].dirty && form.controls['email'].touched" [errorMessage]="errorFor('email')" placeholder="Email">Email</mbsc-input>
+            <mbsc-input name="password" formControlName="password" [error]="form.controls['password'].invalid && form.controls['password'].dirty && form.controls['password'].touched" [errorMessage]="errorFor('password')" password-toggle="true" placeholder="Password">Password</mbsc-input>
+        </mbsc-form-group>
+        <mbsc-form-group inset>
+            <div class="mbsc-padding">
+                <h6>Use lowercase and uppercase characters </h6>
+                <h6>Length of password should be at least 6 characters</h6>
+            </div>
+            <div class="mbsc-padding">
+                <mbsc-button block [disabled]="form.invalid && triedToSubmit" type="submit">Sign Up</mbsc-button>
+            </div>
+        </mbsc-form-group>
+    </form>
+</mbsc-form>

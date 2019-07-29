@@ -1,0 +1,26 @@
+// .main-wrapper{
+// margin:0px;
+// }
+.mydiv{
+    margin:-5px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.mydiv > * {
+    box-sizing: border-box;
+}
+// .mydiv > *:not(:last-child){
+//     margin-right: 32px;
+// }
+.cardListItem{
+    // width:30%;
+    // border:1px solid black;
+    flex: 0 1 calc(33.3% - 32px);
+
+}
+table {
+    width: 100%;
+  }

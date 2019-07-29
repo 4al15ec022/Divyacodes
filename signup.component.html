@@ -1,0 +1,141 @@
+<!-- <p>signup works!</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JustASecond.Com</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+
+  <link rel="stylesheet" href="css/login.css">
+  <script>
+    window.onload = function store() {
+      localStorage.setItem('inputFirstName', document.getElementById('inputFirstName').value)
+      localStorage.setItem('input LastName', document.getElementById('inputLastName').value)
+    }
+    function myFunction() {
+      if (document.getElementById('Pass').value != document.getElementById('ConfirmPassword').value) {
+        alert("please enter proper passwd");
+      }
+    }
+
+  </script>
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+  <form name="myForm" onsubmit="return validateForm()">
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signup my-5">
+            <div class="card-body">
+              <h5 class="card-title text-center">Sign Up</h5>
+              <form class="form-signup">
+                <div class="form-label-group">
+
+                  <input type="name" id="inputFirstName" class="form-control" placeholder="FirstName"
+                    pattern="^[A-Za-z]*" required autofocus>
+                  <label for="inputFirstName">FirstName</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="name" id="inputLastName" class="form-control" placeholder="LastName" required autofocus>
+                  <label for="inputLastName">LastName</label>
+                </div>
+                <div class="custom-control custom-checkbox mb-3">
+                  <h6>Gender</h6>
+                  Male <input type="radio" name="g" value="m" />
+                  Female <input type="radio" name="g" value="f" />
+                </div>
+
+                <div class="form-label-group">
+                  <input type="date" id="inputDate" class="form-control" placeholder="DOB" required>
+                  <label for="inputDate">DOB</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="number" id="inputNumber" class="form-control" placeholder="Contact" pattern="[0-9]*{10}"
+                    required autofocus>
+                  <label for="inputNumber">Contact</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required
+                    autofocus>
+                  <label for="inputEmail">Email address</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="Pass" class="form-control" placeholder="EnterPassword" required autofocus>
+                  <label for="Pass">Password</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="ConfirmPassword" class="form-control" placeholder="confirmPassword"
+                    required autofocus>
+                  <label for="ConfirmPassword">ConfirmPassword</label>
+                </div>
+
+                <button class="btn btn-lg btn-s2ignup btn-block text-uppercase" type="submit"
+                  onclick="myFunction()">Sign Up</button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+----------------------------------------------------------------------------------
+</html> -->
+
+
+
+<div ng-app="demoApp" ng-controller="demoController">
+    <form name="form" class="md-signup-rules" mobiscroll-form="settings">
+        <div class="mbsc-form-group-inset">
+            <div class="mbsc-form-group-title">Sign Up</div>
+
+            <label ng-class="{ 'mbsc-err': form.username.$invalid && (form.$submitted || form.username.$touched) }">
+                <input name="username" type="text" placeholder="Username" minlength="2" ng-model="user.username" required data-icon="user4">
+                <span class="mbsc-err-msg" ng-show="form.username.$error.required && (form.$submitted || form.username.$touched)">Choose a username.</span> 
+        
+            </label>
+
+            <label ng-class="{ 'mbsc-err': form.email.$invalid && (form.$submitted || form.email.$touched) }">
+                <input name="email" type="email" placeholder="Email" ng-model="user.email" required data-icon="ion-ios7-email">
+                <span class="mbsc-err-msg" ng-show="form.email.$error.required && (form.$submitted || form.email.$touched)">Tell us your email.</span>
+                <span class="mbsc-err-msg" ng-show="form.email.$error.email && (form.$submitted || form.email.$touched)">This is not a valid email.</span>
+        
+            </label>
+
+            <label ng-class="{ 'mbsc-err': form.password.$invalid && (form.$submitted || form.password.$touched) }">
+                <input name="password" type="password" placeholder="Password" minlength="6" ng-pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}" ng-model="user.password" required data-icon="lock2" data-password-toggle="true">
+                <span class="mbsc-err-msg" ng-show="form.password.$error.required && (form.$submitted || form.password.$touched)">Choose a password.</span>
+        
+            </label>
+        </div>
+        <div class="mbsc-form-group-inset">
+            <div class="mbsc-padding">
+                <h6>Use lowercase and uppercase characters </h6>
+                <h6>Length of password should be at least 6 characters</h6>
+            </div>
+
+            <div class="mbsc-padding">
+                <button class="mbsc-btn-block" type="submit">Sign Up</button>
+            </div>
+        </div>
+    </form>
+</div>
