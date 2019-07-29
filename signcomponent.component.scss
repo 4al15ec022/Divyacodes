@@ -1,0 +1,52 @@
+.my-form{
+  margin: auto;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+   
+  .full-width {
+    margin: auto;
+    width: 100%;
+    color: black;
+    background-color: rgb(202, 240, 245);
+  }
+
+  .spacer {
+    margin: auto;
+    flex: 1 1 auto;
+  }
+
+  .example-section {
+    margin: auto;
+    width: 100%;
+  color:black;
+  display: flex;
+  flex-direction: column;
+    background-color:rgb(202, 240, 245);
+    min-width: 150px;
+    max-width: 500px;
+  }
+
+ 
+
+   .my-list{
+     margin: auto;
+    //  width: 33.9%;
+    color: rgba(0,0,0,.54);
+     background-color: rgba(0,0,0,.03);
+     min-width: 0px;
+     max-width: 500px;
+    padding: 13px 220px;
+    font-weight: bold;
+    align-items: center;
+  justify-content: center;
+    
+   }
+
+   .my-own{
+     margin:auto;
+     display: flex;
+  align-items: center;
+  justify-content: center;
+   }

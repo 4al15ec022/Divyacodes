@@ -1,0 +1,111 @@
+
+
+  <!-- <mat-card class="my-card">
+     <mat-card-content>
+        <form class="my-form">
+        </form>
+</mat-card-content>
+
+<mat-card-actions>
+        </mat-card-actions>
+  </mat-card> -->
+
+<mat-card-content>
+   
+    <form class="my-form">
+         <mat-toolbar>
+               <span class="my-list">SIGNUP</span>
+             </mat-toolbar>
+             <br>
+             <br>
+             <br>
+       <span appearance="fill">First Name</span>
+       <mat-form-field class="full-width" appearance="fill">
+              <mat-label></mat-label>
+              <input  matInput  placeholder="eg:-Divya"  name="fname"  required>
+           </mat-form-field>
+           <br>
+           <br>
+      
+<span>Last Name</span>    
+           <mat-form-field class="full-width" appearance="fill">
+              <mat-label></mat-label>
+              <input  matInput  placeholder="eg:Shree" name="lname"  required>
+           </mat-form-field>
+       <br>
+       <br>
+
+<span>Address</span>   
+           <mat-form-field class="full-width" appearance="fill">
+              <mat-label></mat-label>
+              <input  matInput  placeholder="eg:Bangalore" name="address"  required>
+           </mat-form-field>
+           <br>
+       <br>
+
+<span>Email</span>    
+           <mat-form-field class="full-width" appearance="fill">
+              <mat-label></mat-label>
+              <input  matInput  placeholder="eg:divya@gmail.com" name="email">
+           </mat-form-field>
+       <br>
+       <br>
+
+<span>Password</span>   
+           <mat-form-field class="full-width" appearance="fill">
+              <mat-label></mat-label>
+              <input  matInput  placeholder="eg:divyaVidya"  name="password">
+           </mat-form-field>
+       <br>
+       <br>
+
+<span>Confirm Password</span>  
+           <mat-form-field class="full-width" appearance="fill">
+            <mat-label></mat-label>
+            <input  matInput  placeholder="eg:divyaVidya"  name="password">
+         </mat-form-field>
+       <br>
+       <br>
+
+
+  <span>Gender</span>
+<section class="example-section" >
+    <label class="example-margin" ></label>
+    <mat-radio-group [(ngModel)]="gender" appearance="fill">
+      <mat-radio-button >Male</mat-radio-button>
+      <mat-radio-button >Female</mat-radio-button>
+      <mat-radio-button >Other</mat-radio-button>
+    </mat-radio-group>
+  </section>
+
+
+  <form class="my-form">
+     <br>
+<span>Date of Birth</span>
+</form>
+
+  <section class="example-section" appearance="fill">
+  <mat-form-field>
+    <mat-label></mat-label>
+<input matInput [matDatepicker]="picker" placeholder="Choose a date">
+<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+<mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+</section>
+
+<form class="my-form">
+<br>
+</form>
+
+<mat-card-content>
+    <form class="my-form">
+    </form>
+  </mat-card-content>
+  
+
+  <mat-card-actions>
+ <button class="my-own" layout-align="center center" mat-raised-button (click)="register()" color="primary" ><a href="logincomponent.component.html">SignUp</a></button>
+  </mat-card-actions>
+
+</form>
+</mat-card-content>

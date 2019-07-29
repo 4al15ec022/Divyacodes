@@ -1,0 +1,27 @@
+.my-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+   
+  .full-width {
+    width: 100%;
+    color: black;
+    background-color: rgb(202, 240, 245);
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+
+  .my-list{
+    text-align: center;
+    width: 462px;
+    color: rgba(0,0,0,.54);
+    background-color: rgba(0,0,0,.03);
+    padding: 8px 20px;
+    font-weight: bold;
+    align-items: center;
+  justify-content: center;
+  }
